@@ -10,19 +10,52 @@
 <meta property="og:image:height" content="627" />
 <meta property="og:url" content="https://legendsmith.github.io/evil-generator" />
 <meta property="og:description" content="Generate evil demons, shades, and other entities using the names of your choice.">
-<script type="text/javascript" src="data/realms.json"></script>
-<script type="text/javascript" src="data/titles.json"></script>
-<script type="text/javascript" src="data/domains.json"></script>
-<script type="text/javascript" src="data/weapons.json"></script>
 <link rel="stylesheet" type="text/css" href="appstyle.css">
 </head>
 <body>
-<div id="main">
+	<div id="topbar"> <button class="tablink" onclick="openPage('basic',this)" id="defaultOpen">Basic Generator</button>
+	<button class="tablink" onclick="openPage('advanced',this)">Advanced Generator</button>
+	<button class="tablink" onclick="openPage('history',this)">Demonic Histories Generator</button>
+	<button class="tablink" onclick="openPage('about',this)">About</button></div>
+	<div id="basic" class="tabcontent">
 	<center><h3 id="h3_header">An Ancient Evil Awakens...</h3></center><br />
 	<div id="div_nameput">Enter Names (Optional)<br />
 	<textarea id="ta_nameput"></textarea></br></div>
 	<div id="div_output"><br/><textarea id="ta_output"></textarea></div>
-<center><button class="fancybtn" id="btn_generate">Break the Seal</button><p class="subnote">Need Names? Try <a href="http://www.rinkworks.com/namegen/">Rinkworks Name generator.</a> You can copy and paste the results table right into the Enter Names box.</p><p class="subnote">Names can optionally be gendered with this syntax: NAME:F for female or NAME:M for male.</p></center></div>
+<center>
+	<div>
+		<button class="fancybtn" id="btn_generate">Break the Seal</button>
+	</div>
+	<div class="reseeding">
+		<button class="fancybtn" id="btn_reseed">Force Reseed</button>
+		<input id="reseed0" value="58267">
+		<input id="reseed1" value="23515">
+	</div>
+	<div>
+		<p class="subnote">Need Names? Try <a href="http://www.rinkworks.com/namegen/">Rinkworks Name generator.</a> You can copy and paste the results table right into the Enter Names box.
+		</p>
+		<p class="subnote">Names can optionally be gendered with this syntax: NAME:F for female or NAME:M for male.</p>
+</center></div></div>
+
+<div id="advanced" class="tabcontent">
+<h3>In development!</h3>
+	 <p>Customise more aspects of the evil entity you generate.</p>
+</div>
+<div id="history" class="tabcontent">
+<h3>In development!</h3>
+		<p>Use generated Evils to generate histories of demonic intrigue and conquest. Witness dark Ascensions, power plays, and ambition.</p>
+</div>
+<div id="about" class="tabcontent">
+		<br>
+		<h4>Developers</h4>
+		<p>Legendsmith: 
+		Original concept, main code, and primary development. <a href="https://github.com/legendsmith">Github</a></p>
+		<p>A.W. Stanley:
+		Webworkers, development assistance. <a href="https://twitter.com/orloglausa">Twitter</a>, <a href="https://github.com/awstanley">Github</a></p>
+		<p>Background created with brushes from<a href="http://www.obsidiandawn.com
+">Obsidian Dawn</a></p>
+</div>
+
 </body>
-<script type="text/javascript" src="main.js"></script>
+<script data-main="app/apps/evil-standalone" src="app/lib/require.js"></script>
 </html>
